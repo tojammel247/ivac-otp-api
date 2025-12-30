@@ -1,0 +1,11 @@
+{
+  "name": "ivac-otp-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.2",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.6.4",
+    "cors": "^2.8.5"
+  }
+}
