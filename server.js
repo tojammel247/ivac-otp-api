@@ -48,8 +48,9 @@ app.get('/get-otp', async (req, res) => {
         const allBodyParts = messages[messages.length - 1].parts.filter(part => part.which === 'TEXT');
         const mail = await simpleParser(allBodyParts[0].body);
         
-        const otpMatch = mail.text.match(/\b\d{6}\b/);
-        const otp = otpMatch ? otpMatch[0] : "OTP not found";
+     // আপনার সার্ভার কোডের এই অংশটি এইভাবে লিখুন:
+const otpMatch = mail.text ? mail.text.match(/\b\d{6}\b/) : null;
+const otp = otpMatch ? otpMatch[0] : "OTP not found";
 
         connection.end();
         res.send(otp);
